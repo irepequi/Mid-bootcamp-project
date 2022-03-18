@@ -1,0 +1,39 @@
+CÓMO CREAR UN SERVIDOR CON EXPRESS
+
+1.- Nos creamos una carpeta que va a contener a nuestro servidor con todos 
+los archivos asociados. 
+
+2. - Creamos el que será nuestro archivo principal, puede llamarse "index.js" o
+"app.js"
+
+3.- Abrimos la terminal y accedemos a la carpeta de nuestro proyecto, la que 
+contendrá el servidor.
+
+4.- Ejecutamos el comando "$ npm init" para iniciar npm en este proyecto y generar 
+un archivo package.json automáticamente.
+
+5.- Al ejecutar ese comando, la terminal nos hará una serie de preguntas sobre 
+configuración y detalles del proyecto. Podemos completar o dejar lo que nos viene
+por defecto. 
+
+6.- Si queremos ir más rápido y no tenemos la intención de contestar esas preguntas
+por el momento, podríamos utilizar el comando "$ npm init -y"
+
+7.- Instalamos Express con el comando "$ npm install express --save" que nos generará
+una carpeta llamada node_modules con un montón de información y archivos de librerías
+que se descargan cuando instalamos express. Esta carpeta no se toca.
+
+8.- Creamos una archivo en la raiz del proyecto llamado ".gitignore" y dentro especificamos
+los archivos o carpetas que queremos que Git nos ignore para que no nos los incluya en 
+las copias de seguridad y no los suba a GitHub (pesan mucho).
+
+9.- Ejecutamos en la terminal el comando "$ npm install" ó "$ npm i" que termina de instalar
+todas las dependencias que vienen con express y todas las que haya en el package.json
+
+10.- Me voy a la página de Express y copio el código que hay en la pestaña Hello World.
+
+11.- Lo pego en el idex.js
+
+12.- Levanto el servidor
+
+13.- Pongo la ruta correspondiente en el navegador
