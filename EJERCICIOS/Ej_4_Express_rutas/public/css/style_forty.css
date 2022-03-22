@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* COLORS */
+/* MEDIDAS */
+/* COLORS */
+/* MEDIDAS */
+/* TABLET */
+/* Portrait */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  .principal {
+    margin-top: 4vw !important;
+    background-color: #232943;
+  }
+}
+
+/* MOBILE 📱 */
+/* Portrait */
+@media (max-width: 767px) and (orientation: portrait) {
+  .orientacion_drch {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .principal {
+    margin-top: 10vw !important;
+    background-color: #232943;
+  }
+  /* FORMS */
+  .formulario input[type="text"] {
+    width: 100% !important;
+    margin: 2px;
+  }
+  .formulario input[type="password"] {
+    width: 100% !important;
+    margin: 2px;
+  }
+  .formulario input[type="email"] {
+    width: 100%;
+    margin: 2px;
+  }
+  .formulario button {
+    margin: 4px;
+  }
+  .email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .email span {
+    margin: 10px;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: white !important;
+}
+
+/* NAVEGACION */
+.nav {
+  padding: 2vw !important;
+  width: 100vw;
+  position: fixed;
+  background-color: #232943;
+}
+
+.nav .logo {
+  background-color: white;
+  color: #232943 !important;
+  font-weight: bold;
+}
+
+.orientacion_drch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.orientacion_drch .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 1px white;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+/* SECTIONS */
+.principal {
+  padding: 10vw 4vw 4vw 4vw !important;
+  background-color: #232943;
+}
+
+.aliquam {
+  padding: 4vw !important;
+  background-color: #6fc3df;
+}
+
+.tempus {
+  padding: 4vw !important;
+  background-color: #8d82c4;
+}
+
+.magna {
+  padding: 4vw !important;
+  background-color: #eb8d81;
+}
+
+.ipsum {
+  padding: 4vw !important;
+  background-color: #e7b787;
+}
+
+.consequat {
+  padding: 4vw !important;
+  background-color: #8da9e8;
+}
+
+.etiam {
+  padding: 4vw !important;
+  background-color: #88c5a4;
+}
+
+.azul {
+  padding: 4vw !important;
+  background-color: #232943;
+}
+
+/* HR */
+hr {
+  background-color: white;
+  border: none;
+  height: 2px !important;
+  opacity: 1 !important;
+}
+
+/* BUTTON */
+button {
+  background: transparent;
+  border: solid 3px white;
+  border-radius: 4px;
+  color: white;
+}
+
+/* FORMS */
+.formulario div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.formulario input[type="email"] {
+  width: 100%;
+  margin: 2px;
+}
+
+.formulario button {
+  margin: 4px;
+}
+
+.email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.email span {
+  margin: 10px;
+}
+/*# sourceMappingURL=style.css.map */
