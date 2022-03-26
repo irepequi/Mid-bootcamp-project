@@ -1,0 +1,341 @@
+/* VARIABLES */
+/* BACKGROUND */
+* {
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  padding-left: 15vw !important;
+  padding-right: 15vw !important;
+  background-image: url("https://fondosmil.com/fondo/17013.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+nav img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  height: 17px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 80px !important;
+  font-weight: 300 !important;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* SECTION 1 - cards */
+.section1 {
+  padding: 4vw 15vw !important;
+  text-align: center !important;
+}
+
+.section1 .title {
+  padding-bottom: 4vw;
+}
+
+.group_card {
+  margin-top: 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.group_card .col-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.group_card .col-4 .card {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 300px;
+  width: 300px;
+  padding: 40px;
+  margin-bottom: 2vw;
+}
+
+.group_card .col-4 .cards_middle {
+  margin-top: -40px !important;
+}
+
+/* SECTION 2 - User */
+.section2 {
+  padding: 4vw 15vw !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(7, 10, 65, 0.863))), url("/images/mountains.jpg");
+  background-image: linear-gradient(rgba(7, 10, 65, 0.863)), url("/images/mountains.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.section2 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section2 .info .card {
+  background-color: transparent !important;
+  border: 0;
+  color: white;
+  width: 350px;
+}
+
+.section2 .info a {
+  color: white;
+  border: solid 1px white;
+  border-radius: 40px;
+}
+
+.section2 .info a:hover {
+  color: #070a41;
+  border: solid 1px white;
+  background-color: #fff;
+}
+
+.section2 .avatar img {
+  width: 300px;
+}
+
+/* SECTION 3 - Carousel */
+.section3 {
+  padding: 4vw 15vw !important;
+}
+
+/* SECTION 4 - All Users */
+.section4 {
+  padding: 4vw 15vw !important;
+}
+
+.section4 .title {
+  padding-bottom: 4vw;
+}
+
+.section4 .title h2 span {
+  font-weight: bold;
+}
+
+.section4 .all_users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section4 .all_users .col-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section4 .all_users .card {
+  margin-bottom: 2vw;
+}
+
+.section4 .all_users .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.section4 .all_users a {
+  border-radius: 40px;
+}
+
+.section4 .all_users a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+/* SECTION 5 - castillitos */
+.section5 {
+  padding: 4vw !important;
+  background: -webkit-gradient(linear, left top, right top, color-stop(32%, #434497), to(#000));
+  background: linear-gradient(90deg, #434497 32%, #000 100%);
+}
+
+.section5 h2 {
+  padding-bottom: 2vw;
+  color: white;
+}
+
+.section5 .group_castillo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.section5 .group_castillo img {
+  width: 100px;
+}
+
+/* SECTION 6 - formulario */
+.section6 {
+  padding: 4vw 15vw !important;
+  /* parte derecha del form */
+}
+
+.section6 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.section6 .form form {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 40px;
+  width: 400px;
+}
+
+.section6 .form label {
+  color: gray;
+}
+
+.section6 .form button {
+  -o-object-position: center !important;
+     object-position: center !important;
+  border-radius: 40px;
+}
+
+.section6 button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.section6 .text_form {
+  padding: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section6 .text_form h2 {
+  text-align: left;
+}
+
+.section6 .text_form .images_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section6 .text_form .images_form .group_images_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.section6 .text_form a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer .bg_azul {
+  padding: 4vw 15vw !important;
+  background: -webkit-gradient(linear, left top, right top, color-stop(32%, #434497), to(#000));
+  background: linear-gradient(90deg, #434497 32%, #000 100%);
+  color: white;
+  text-align: center;
+}
+
+footer .bg_azul button {
+  color: white;
+  border-radius: 40px;
+  border: solid 1px white;
+  background-color: transparent;
+}
+
+footer .bg_azul button:hover {
+  color: #070a41;
+  border: solid 1px white;
+  background-color: #fff;
+}
+
+footer .rrss {
+  padding: 4vw 37vw !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+/*# sourceMappingURL=style.css.map */

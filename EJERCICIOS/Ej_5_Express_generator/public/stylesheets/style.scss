@@ -1,0 +1,286 @@
+
+    /* VARIABLES */
+    $padding-y: 4vw;
+    $padding-x: 15vw;
+
+    /* BACKGROUND */
+    $g_azul_negro: linear-gradient(90deg, #434497 32%, #000 100%);
+
+    * {
+        font-family: 'Roboto',
+            sans-serif;
+        box-sizing: border-box;
+    }
+
+    .container-fluid {
+        padding: 0 ;
+    }
+    
+    .title {
+        text-align: center;
+    }
+
+    /* HEADER */
+    header {
+        padding-left: $padding-x !important;
+        padding-right: $padding-x !important;
+        background-image: url("https://fondosmil.com/fondo/17013.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+
+    nav{
+        img {
+            filter: invert(100%);
+            height: 17px;
+            margin-right: 10px;
+        }        
+    } 
+
+    h1 {
+        font-size: 80px !important;
+        font-weight: 300 !important;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    /* SECTION 1 - cards */
+    .section1{
+        padding: $padding-y $padding-x !important;
+        text-align: center !important;
+
+        .title {
+            padding-bottom: $padding-y;
+        }
+    } 
+
+    .group_card {
+        margin-top: 4vw;
+        display: flex;
+        justify-content: center;
+
+        .col-4 {
+            display: flex;
+            justify-content: center;
+
+            .card {
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                display: flex;
+                justify-content: space-evenly;
+                height: 300px;
+                width: 300px;
+                padding: 40px;
+                margin-bottom: 2vw;
+            }
+
+            .cards_middle {
+                margin-top: -40px !important;
+            }
+        }
+    }
+
+    /* SECTION 2 - User */
+    .section2 {
+        padding: $padding-y $padding-x !important;
+        background-image: linear-gradient(rgba(7, 10, 65, 0.863)),
+        url("/images/mountains.jpg");
+        background-size: cover;
+        background-position: center;
+        
+        .info {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+            .card{
+                background-color: transparent !important;
+                border: 0;
+                color:white;
+                width: 350px;
+            }
+            
+            a {
+                color:white;
+                border: solid 1px white;
+                border-radius: 40px;
+            }
+
+            a:hover {
+                color: #070a41;
+                border: solid 1px white;
+                background-color: #fff;
+            }
+        }
+
+        .avatar {
+            img {
+                width: 300px;
+            }
+        }
+    }
+
+    /* SECTION 3 - Carousel */
+    .section3 {
+        padding: $padding-y $padding-x !important;
+    }
+
+
+    /* SECTION 4 - All Users */
+    .section4 {
+        padding: $padding-y $padding-x !important;
+        
+        .title {
+            padding-bottom: $padding-y;
+            h2 {
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+        
+        .all_users {
+            display: flex;
+            justify-content: center;
+
+            .col-4 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .card {
+                margin-bottom: 2vw;
+                
+                img {
+                    object-fit: cover;
+                    height: 250px;
+                    object-position: top;
+                }
+            }
+
+            a {
+                border-radius: 40px;
+            }
+
+            a:hover {
+                background-color: #fff;
+                color: black;
+            }
+        }
+
+    }
+
+    /* SECTION 5 - castillitos */
+    .section5 {
+        padding: $padding-y !important;
+        background: $g_azul_negro;
+
+        h2 {
+            padding-bottom: 2vw;
+            color: white;
+        }
+
+        .group_castillo {
+            display: flex;
+            justify-content: space-evenly;
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+
+    /* SECTION 6 - formulario */
+    .section6 {
+        padding: $padding-y $padding-x !important;  
+
+        .form {
+            display: flex;
+            justify-content: flex-end;
+
+            form {
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding: 40px;
+                width: 400px;
+            }
+                
+            label {
+                color: gray;
+            }
+
+            button {
+                object-position: center !important;
+                border-radius: 40px;
+            }
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: black;
+        }
+
+        /* parte derecha del form */
+        .text_form {
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                text-align: left;
+            }
+
+            // imagenes
+            .images_form {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .group_images_text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+
+    /* FOOTER */
+    footer {
+        .bg_azul {
+            padding: $padding-y $padding-x !important;
+            background: $g_azul_negro;
+            color:white;
+            text-align: center;
+
+            button {
+                color:white;
+                border-radius: 40px;
+                border: solid 1px white;
+                background-color: transparent;
+            }
+
+            button:hover {
+                color: #070a41;
+                border: solid 1px white;
+                background-color: #fff;
+            }
+        }
+
+        .rrss {
+            padding: $padding-y 37vw !important;
+            display: flex;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+    }
