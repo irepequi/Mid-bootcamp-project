@@ -167,7 +167,7 @@
 
       <!-- SECTION 2 - one user -->
       <!-- TODO - -->
-      <div class="row section2">
+      <div class="row section2" id="one_user">
         <div class="col-6 info">
           <div class="card">
             <div class="card-body">
@@ -181,7 +181,7 @@
         </div>
         <div class="col-6 avatar">
           <!-- TODO - IMAGEN DEL USUARIO -->
-          <img src="/images/guerrero1.jpg" alt="..." />
+          <img src="/images/<%= result[0].img %>" alt="..." />
         </div>
       </div>
 
@@ -203,13 +203,17 @@
           <% result.forEach( object => { %>
           <div class="col-4">
             <div class="card" style="width: 18rem">
-              <img src="/images/guerrero1.jpg" class="card-img-top" alt="..." />
+              <img
+                src="/images/<%= object.img %>"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title"><%= object.name %></h5>
                 <p class="card-text"><%= object.description %></p>
-                <p class="card-text">Phone: <%= object.phone %></p>
-                <p class="card-text">Email: <%= object.email %></p>
-                <a href="/users/<%= object.user_id %>" class="btn btn-dark"
+                <a
+                  href="/users/<%= object.user_id %>#one_user"
+                  class="btn btn-dark"
                   >See more</a
                 >
               </div>
@@ -218,6 +222,34 @@
           <br />
           <% }) %>
         </div>
+
+        <!--
+        <div class="row all_users">
+          <% result.forEach( object => { %>
+          <div class="col-4">
+            <div class="card" style="width: 18rem">
+              <img
+                src="/images/<%= object.img %>"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title"><%= object.name %></h5>
+                <p class="card-text"><%= object.description %></p>
+                <p class="card-text">Phone: <%= object.phone %></p>
+                <p class="card-text">Email: <%= object.email %></p>
+                <a
+                  href="/users/<%= object.user_id %>#one_user"
+                  class="btn btn-dark"
+                  >See more</a
+                >
+              </div>
+            </div>
+          </div>
+          <br />
+          <% }) %>
+        </div>
+        -->
       </div>
 
       <!-- SECTION 5 - castillitos -->
@@ -239,7 +271,7 @@
       <div class="row section6">
         <div class="col-6 form">
           <!-- form -->
-          <form action="/" method="post">
+          <form action="/" method="post" enctype="multipart/form-data">
             <h2>Save User</h2>
             <div class="form-floating mb-3">
               <input
@@ -279,6 +311,7 @@
                 class="form-control mb-3"
                 type="file"
                 id="formFileDisabled"
+                name="img"
               />
             </div>
 

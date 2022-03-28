@@ -181,7 +181,7 @@
         </div>
         <div class="col-6 avatar">
           <!-- TODO - IMAGEN DEL USUARIO -->
-          <img src="/images/guerrero1.jpg" alt="..." />
+          <img src="/images/<%= resultOneUser[0].img %>" alt="..." />
         </div>
       </div>
 
@@ -203,7 +203,11 @@
           <% resultOneUser.forEach( object => { %>
           <div class="col-4">
             <div class="card" style="width: 18rem">
-              <img src="/images/guerrero1.jpg" class="card-img-top" alt="..." />
+              <img
+                src="/images/<%= object.img %>"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title"><%= object.name %></h5>
                 <p class="card-text"><%= object.description %></p>
