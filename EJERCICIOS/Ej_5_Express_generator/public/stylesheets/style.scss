@@ -18,6 +18,24 @@
         text-align: center;
     }
 
+    /* FORM */
+    .edit_form {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 40px;
+        width: 400px;
+
+        label {
+            color: gray;
+        }
+
+        button {
+            object-position: center !important;
+            border-radius: 40px;
+        }
+    }
+
+
+
     /* HEADER */
     header {
         padding-left: $padding-x !important;

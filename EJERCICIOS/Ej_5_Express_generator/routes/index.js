@@ -34,6 +34,30 @@ router.get("/deleteUser/:id", (req, res) => {
   });
 });
 
+// EDIT FORM - PARTE 1 (visualizar el form con los datos del id)
+//localhost:3000/viewEditForm/:id
+router.get("/viewEditForm/:id", (req, res) => {
+  let id = req.params.id;
+  let sql = `SELECT * FROM user WHERE user_id = ${id}`;
+  connection.query(sql, (error, result) => {
+    if (error) throw error;
+    res.render("editForm", { result });
+  });
+});
+
+// EDIT FORM - PARTE 2 (actualizar el form)
+//localhost:3000/editUser/:id
+router.post("/editUser/:id", uploadImage(), (req, res) => {
+  let { name, description, phone, email } = req.body;
+  let img = req.file.filename;
+  let id = req.params.id;
+  let sql = `UPDATE user SET name = "${name}", description = "${description}", phone = "${phone}", email = "${email}", img = "${img}" WHERE user_id = ${id} `;
+  connection.query(sql, (error, result) => {
+    if (error) throw error;
+    res.redirect(`/users/${id}`);
+  });
+});
+
 // FORM
 router.post("/", uploadImage(), (req, res) => {
   let { name, description, phone, email } = req.body;

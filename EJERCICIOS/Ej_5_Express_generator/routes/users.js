@@ -1,5 +1,6 @@
 var express = require("express");
 const connection = require("../config/db");
+const uploadImage = require("../middleware/multer");
 var router = express.Router();
 
 /* GET users listing. */
@@ -27,7 +28,7 @@ router.get("/", (req, res) => {
 });
 
 // DELETE
-// localhost:3000/users/deleteUser/:id
+// localhost:3000/deleteUser/:id
 router.get("/deleteUser/:id", (req, res) => {
   let id = req.params.id;
   let sql = `DELETE FROM user WHERE user_id = ${id}`;
