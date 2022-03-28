@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
   connection.query(sql, (error, result) => {
     if (error) throw error;
     console.log(result);
-    res.render("index", { result, title: "Castillo" });
+    res.render("index", { result });
   });
 });
 
@@ -19,10 +19,22 @@ router.get("/", (req, res) => {
   let sql = `SELECT * FROM user WHERE user_id = ${id}`;
   connection.query(sql, (error, result) => {
     if (error) throw error;
-    res.render("index", { result, title: "Castillo" });
+    res.render("index", { result });
   });
 });
 
+// DELETE
+// localhost:3000/deleteUser/:id
+router.get("/deleteUser/:id", (req, res) => {
+  let id = req.params.id;
+  let sql = `DELETE FROM user WHERE user_id = ${id}`;
+  connection.query(sql, (error, result) => {
+    if (error) throw error;
+    res.redirect("/");
+  });
+});
+
+// FORM
 router.post("/", uploadImage(), (req, res) => {
   let { name, description, phone, email } = req.body;
   let img = req.file.filename;

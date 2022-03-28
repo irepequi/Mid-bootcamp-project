@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Castillo</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <!-- BOOTSTRAP -->
@@ -14,11 +14,6 @@
     <!-- GOOGLE ICON  -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <!-- FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -166,7 +161,6 @@
       </div>
 
       <!-- SECTION 2 - one user -->
-      <!-- TODO - -->
       <div class="row section2" id="one_user">
         <div class="col-6 info">
           <div class="card">
@@ -215,6 +209,16 @@
                   href="/users/<%= object.user_id %>#one_user"
                   class="btn btn-dark"
                   >See more</a
+                >
+                <a
+                  href="/users/<%= object.user_id %>"
+                  class="btn btn-outline-dark"
+                  >Edit</a
+                >
+                <a
+                  href="/deleteUser/<%= object.user_id %>"
+                  class="btn btn-outline-danger"
+                  >Delete</a
                 >
               </div>
             </div>

@@ -13,7 +13,7 @@ router.get("/:id", (req, res) => {
   let sql = `SELECT * FROM user WHERE user_id = ${id}`;
   connection.query(sql, (error, resultOneUser) => {
     if (error) throw error;
-    res.render("oneUser", { resultOneUser, title: "Castillo" });
+    res.render("oneUser", { resultOneUser });
   });
 });
 
@@ -22,10 +22,22 @@ router.get("/", (req, res) => {
   connection.query(sql, (error, result) => {
     if (error) throw error;
     console.log(result);
-    res.render("index", { result, title: "Castillo" });
+    res.render("index", { result });
   });
 });
 
+// DELETE
+// localhost:3000/users/deleteUser/:id
+router.get("/deleteUser/:id", (req, res) => {
+  let id = req.params.id;
+  let sql = `DELETE FROM user WHERE user_id = ${id}`;
+  connection.query(sql, (error, result) => {
+    if (error) throw error;
+    res.redirect("/");
+  });
+});
+
+// FORM
 router.post("/", (req, res) => {
   let { name, description, phone, email } = req.body;
   let sql = `INSERT INTO user (name, description, phone, email) VALUES ("${name}", "${description}", "${phone}", "${email}")`;

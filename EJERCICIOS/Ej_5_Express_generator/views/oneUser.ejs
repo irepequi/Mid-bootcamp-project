@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Castillo</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <!-- BOOTSTRAP -->
@@ -14,11 +14,6 @@
     <!-- GOOGLE ICON  -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <!-- FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -166,7 +161,6 @@
       </div>
 
       <!-- SECTION 2 - one user -->
-      <!-- TODO - -->
       <div class="row section2">
         <div class="col-6 info">
           <div class="card">
@@ -176,6 +170,16 @@
               <p class="card-text">Phone: <%= resultOneUser[0].phone %></p>
               <p class="card-text">Email: <%= resultOneUser[0].email %></p>
               <a href="/" class="btn">Return</a>
+              <a
+                href="/users/<%= resultOneUser[0].user_id %>"
+                class="btn btn-outline-dark"
+                >Edit</a
+              >
+              <a
+                href="/deleteUser/<%= resultOneUser[0].user_id %>"
+                class="btn btn-outline-danger"
+                >Delete</a
+              >
             </div>
           </div>
         </div>
@@ -243,7 +247,7 @@
       <div class="row section6">
         <div class="col-6 form">
           <!-- form -->
-          <form action="/users" method="post">
+          <form action="/users" method="post" enctype="multipart/form-data">
             <h2>Save User</h2>
             <div class="form-floating mb-3">
               <input
@@ -283,6 +287,7 @@
                 class="form-control mb-3"
                 type="file"
                 id="formFileDisabled"
+                name="img"
               />
             </div>
 
