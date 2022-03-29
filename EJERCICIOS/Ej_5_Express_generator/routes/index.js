@@ -49,9 +49,14 @@ router.get("/viewEditForm/:id", (req, res) => {
 //localhost:3000/editUser/:id
 router.post("/editUser/:id", uploadImage(), (req, res) => {
   let { name, description, phone, email } = req.body;
-  let img = req.file.filename;
   let id = req.params.id;
   let sql = `UPDATE user SET name = "${name}", description = "${description}", phone = "${phone}", email = "${email}", img = "${img}" WHERE user_id = ${id} `;
+
+  if (req.file != undefined) {
+    let img = req.file.filename;
+    sql = `UPDATE user SET name = "${name}", description = "${description}", phone = "${phone}", email = "${email}", img = "${img}" WHERE user_id = ${id} `;
+  }
+
   connection.query(sql, (error, result) => {
     if (error) throw error;
     res.redirect(`/users/${id}`);
@@ -61,11 +66,15 @@ router.post("/editUser/:id", uploadImage(), (req, res) => {
 // FORM
 router.post("/", uploadImage(), (req, res) => {
   let { name, description, phone, email } = req.body;
-  let img = req.file.filename;
   let sql = `INSERT INTO user (name, description, phone, email, img) VALUES ("${name}", "${description}", "${phone}", "${email}", "${img}")`;
+
+  if (req.file != undefined) {
+    let img = req.file.filename;
+    sql = `INSERT INTO user (name, description, phone, email, img) VALUES ("${name}", "${description}", "${phone}", "${email}", "${img}")`;
+  }
+
   connection.query(sql, (error, resultInsert) => {
     if (error) throw error;
-    console.log(resultInsert);
     res.redirect("/");
   });
 });

@@ -41,7 +41,13 @@ router.get("/deleteUser/:id", (req, res) => {
 // FORM
 router.post("/", (req, res) => {
   let { name, description, phone, email } = req.body;
-  let sql = `INSERT INTO user (name, description, phone, email) VALUES ("${name}", "${description}", "${phone}", "${email}")`;
+  let sql = `INSERT INTO user (name, description, phone, email, img) VALUES ("${name}", "${description}", "${phone}", "${email}", "${img}")`;
+
+  if (req.file != undefined) {
+    let img = req.file.filename;
+    sql = `INSERT INTO user (name, description, phone, email, img) VALUES ("${name}", "${description}", "${phone}", "${email}", "${img}")`;
+  }
+
   connection.query(sql, (error, resultInsert) => {
     if (error) throw error;
     console.log(resultInsert);
