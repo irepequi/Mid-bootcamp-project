@@ -69,6 +69,96 @@ body {
   margin-left: -106px;
 }
 
+.allChef div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.allChef a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 350px;
+  width: 350px !important;
+}
+
+.allChef a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.allChef .oneChef {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.allChef .oneChef h3 {
+  color: white;
+}
+
+.allChef .oneChef .color-overlay {
+  background: rgba(213, 60, 60, 0);
+  height: 350px;
+  width: 350px !important;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+.allChef .oneChef .gradient-overlay {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0.6)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 80%);
+  height: 350px;
+  width: 350px !important;
+  position: absolute;
+  z-index: 15;
+}
+
+.allChef .oneChef:hover .card-info {
+  opacity: 1;
+}
+
+.allChef .oneChef:hover .color-overlay {
+  background: rgba(213, 60, 60, 0.8);
+}
+
+.allChef .card-info {
+  position: absolute;
+  color: white;
+  font-family: 'IbarraRealNova';
+  font-style: 16px;
+  z-index: 20;
+  opacity: 0;
+  -webkit-transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+.allChef .col-xs-12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .formRight {
   display: -webkit-box;
   display: -ms-flexbox;

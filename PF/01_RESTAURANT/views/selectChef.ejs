@@ -34,7 +34,6 @@
           <h2>Selecciona el chef que creará un plato</h2>
           <div class="row">
             <div class="col-lg-6">
-
               <!-- select chefs -->
               <select class="form-select" aria-label="Default select example">
                 <option selected>Elige el chef</option>
@@ -46,16 +45,15 @@
                 <% }) %>
               </select>
 
-          <!-- form dish -->
-          <form
-            action="/dish/saveDish/<%= result[0].chef_id %>"
-            method="post"
-            enctype="multipart/form-data"
-            class="form"
-          >
-            <h2>Crear el plato</h2>
+              <!-- form dish -->
+              <form
+                action="/dish/saveDish/<%= result[0].chef_id %>"
+                method="post"
+                enctype="multipart/form-data"
+                class="form"
+              >
+                <h2>Crear el plato</h2>
 
-            
                 <div class="form-floating mb-3">
                   <input
                     type="text"
@@ -90,9 +88,9 @@
                 <!-- botones -->
                 <button type="submit" class="btn">Guardar</button>
                 <a href="/" class="btn">Home</a>
-              </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

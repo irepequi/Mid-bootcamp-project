@@ -23,52 +23,126 @@
 
 
   // INDEX ---------------------------------------------------------------------
-    body {
-      font-family: 'Montserrat' !important;
-      background-color: #eaeffa !important;
-    }
-    
-    .header {
-      //@include background ("/images/web/bg_1.jpg");
-      height: 100vh;
-      padding: 10vw;
+  body {
+    font-family: 'Montserrat' !important;
+    background-color: #eaeffa !important;
+  }
+  
+  .header {
+    //@include background ("/images/web/bg_1.jpg");
+    height: 100vh;
+    padding: 10vw;
 
-        h1 {
-          font-family: 'IbarraRealNova' !important;
-          //font-weight: bold;
-          font-size: 100px;
-        }
+      h1 {
+        font-family: 'IbarraRealNova' !important;
+        //font-weight: bold;
+        font-size: 100px;
+      }
 
-        .carousel {
-          margin-top: -292px;
-          margin-left: 334px;
-          
-          img {
-            width: 500px !important;
-          }
-        }
+      .carousel {
+        margin-top: -292px;
+        margin-left: 334px;
         
-        .quote {
-          .quote_symbol {
-            transform: rotate(180deg);
-            
-            span {
-              font-size: 80px;
-              color: $red;
-            }
+        img {
+          width: 500px !important;
+        }
+      }
+      
+      .quote {
+        .quote_symbol {
+          transform: rotate(180deg);
+          
+          span {
+            font-size: 80px;
+            color: $red;
           }
+        }
 
-          p {
-            text-align: right;
-          }
+        p {
+          text-align: right;
         }
-        .signature {
-          img {
-            margin-top: 16vw;
-            margin-left: -106px;
-          }
+      }
+      .signature {
+        img {
+          margin-top: 16vw;
+          margin-left: -106px;
         }
+      }
+  }
+
+  //  CHEF ---------------------------------------------------------------------
+  .allChef {
+    div {
+       display: flex;
+      justify-content: center;
     }
+
+    a {
+      display: flex;
+      justify-content: center;
+      height: $card_chef_preview;
+      width: $card_chef_preview !important;
+      
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .oneChef {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      
+      h3 {
+        color:white;
+      }
+
+      .color-overlay{
+        background: rgba(213, 60, 60, 0); // $red
+        height: $card_chef_preview;
+        width: $card_chef_preview !important;
+        position: absolute;
+        z-index: 10;
+        transition: background .3s cubic-bezier(.33,.66,.66,1);
+      }
+      
+      .gradient-overlay{
+        background-image: linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 80%);
+        height: $card_chef_preview;
+        width: $card_chef_preview !important;
+        position: absolute;
+        z-index: 15;
+      }
+      
+      &:hover{
+        
+        .card-info{
+          opacity: 1;
+        }
+        .color-overlay{
+          background: rgba(213, 60, 60, 0.8); // $red
+        }
+      }
+    }
+
+    .card-info{
+      position: absolute;
+      color: white;
+      font-family: 'IbarraRealNova';
+      font-style: 16px;
+      z-index: 20;
+      opacity: 0;
+      transition: bottom .3s, opacity .3s cubic-bezier(.33,.66,.66,1);
+    }
+
+    // responsive
+    .col-xs-12 {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   // FORM ----------------------------------------------------------------------
   .formRight {
