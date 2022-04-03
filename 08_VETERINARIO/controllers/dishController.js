@@ -1,9 +1,9 @@
 const connection = require("../config/db");
 
-class PetController {
+class DishController {
   //  Muestra HOME con todas las mascotas
   showHome = (req, res) => {
-    let sql = `SELECT * FROM pet`;
+    let sql = `SELECT * FROM dish`;
 
     connection.query(sql, (error, result) => {
       if (error) throw error;
@@ -12,4 +12,4 @@ class PetController {
   };
 }
 
-module.exports = new PetController();
+module.exports = new DishController();

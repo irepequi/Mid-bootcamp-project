@@ -1,0 +1,64 @@
+    @import "variables";
+    
+    //BACKGROUNDS
+    @mixin background ($url_background) {
+        background-image: url($url_background);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    @mixin background_dark ($url_background) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.582), 
+        rgba(0, 0, 0, 0.582)),
+        url($url_background);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    // BUTTONS
+    @mixin azul_oscuro_button {
+        border: solid 2px $azul_oscuro;
+        border-radius: 4px;
+        color: $azul_oscuro;
+        background-color: transparent;
+        padding: 8px 15px;
+    } 
+
+    @mixin azul_oscuro_button_hover {
+        border: solid 2px $azul_oscuro;
+        border-radius: 4px;
+        color: $gris_claro;
+        background-color: $azul_oscuro;
+        transition: 0.2s;
+    }
+
+    @mixin red_button {
+        border: solid 2px $red;
+        border-radius: 4px;
+        color: $gris_claro !important;
+        background-color: $red;
+        padding: 8px 15px;
+    }
+
+    @mixin red_button_hover {
+        border: solid 2px $red;
+        border-radius: 4px;
+        color: $red !important;
+        background-color: transparent;
+        transition: 0.2s;
+    }
+
+    // STYLE INPUTS
+    @mixin input{
+        border-radius: 10px;
+        border: 0;
+        background-color: $gris_form !important;
+    }
+
+    //STYLE TEXTS
+    @mixin h3_azul_oscuro {
+        color: $azul_oscuro;
+        text-transform: uppercase;
+    }

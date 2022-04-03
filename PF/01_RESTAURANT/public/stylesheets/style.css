@@ -1,8 +1,309 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* MEASURE */
+/* COLORS */
+/* BACKGROUNDS */
+/* MEASURE */
+/* COLORS */
+/* BACKGROUNDS */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+* ::-moz-selection {
+  background-color: #d53c3c;
+  color: #ffffff;
 }
+
+* ::selection {
+  background-color: #d53c3c;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: IbarraRealNova;
+  src: url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap");
+  font-family: Montserrat;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+}
+
+body {
+  font-family: 'Montserrat' !important;
+  background-color: #eaeffa !important;
+}
+
+.header {
+  height: 100vh;
+  padding: 10vw;
+}
+
+.header h1 {
+  font-family: 'IbarraRealNova' !important;
+  font-size: 100px;
+}
+
+.header .carousel {
+  margin-top: -292px;
+  margin-left: 334px;
+}
+
+.header .carousel img {
+  width: 500px !important;
+}
+
+.header .quote .quote_symbol {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.header .quote .quote_symbol span {
+  font-size: 80px;
+  color: #d53c3c;
+}
+
+.header .quote p {
+  text-align: right;
+}
+
+.header .signature img {
+  margin-top: 16vw;
+  margin-left: -106px;
+}
+
+.formRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formRight form {
+  margin-left: 2vw !important;
+  margin-right: 2vw !important;
+}
+
+.formRight form h2 {
+  margin-bottom: 2vw;
+}
+
+.formRight form input, .formRight form textarea {
+  border-radius: 10px;
+  border: 0;
+  background-color: #d8dde6 !important;
+}
+
+.formRight button {
+  border: solid 2px #d53c3c;
+  border-radius: 4px;
+  color: #eaeffa !important;
+  background-color: #d53c3c;
+  padding: 8px 15px;
+}
+
+.formRight button:hover {
+  border: solid 2px #d53c3c;
+  border-radius: 4px;
+  color: #d53c3c !important;
+  background-color: transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.formRight a {
+  border: solid 2px #262F3D;
+  border-radius: 4px;
+  color: #262F3D;
+  background-color: transparent;
+  padding: 8px 15px;
+}
+
+.formRight a:hover {
+  border: solid 2px #262F3D;
+  border-radius: 4px;
+  color: #eaeffa;
+  background-color: #262F3D;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.selectFormRight .select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.selectFormRight .select h2 {
+  margin-bottom: 2vw;
+}
+
+.selectFormRight .select form {
+  margin-top: 4vw;
+}
+
+.selectFormRight .select form input, .selectFormRight .select form textarea {
+  border-radius: 10px;
+  border: 0;
+  background-color: #d8dde6 !important;
+}
+
+.selectFormRight .select button {
+  border: solid 2px #d53c3c;
+  border-radius: 4px;
+  color: #eaeffa !important;
+  background-color: #d53c3c;
+  padding: 8px 15px;
+}
+
+.selectFormRight .select button:hover {
+  border: solid 2px #d53c3c;
+  border-radius: 4px;
+  color: #d53c3c !important;
+  background-color: transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.selectFormRight .select a {
+  border: solid 2px #262F3D;
+  border-radius: 4px;
+  color: #262F3D;
+  background-color: transparent;
+  padding: 8px 15px;
+}
+
+.selectFormRight .select a:hover {
+  border: solid 2px #262F3D;
+  border-radius: 4px;
+  color: #eaeffa;
+  background-color: #262F3D;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.img_formChef {
+  background-image: url("/images/web/img_formChef.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.img_formDish {
+  background-image: url("/images/web/img_formDish.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.img_formLogin {
+  background-image: url("/images/web/img_formLogin.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: bottom !important;
+  height: 100vh;
+}
+
+.img_editChef {
+  background-image: url("/images/web/img_editChef.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.img_editDish {
+  background-image: url("/images/web/img_editDish.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.img_selectChef {
+  background-image: url("/images/web/img_selectChef.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.not_found {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.582)), to(rgba(0, 0, 0, 0.582))), url("/images/web/404.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.582), rgba(0, 0, 0, 0.582)), url("/images/web/404.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text h1 {
+  color: #d53c3c;
+  text-shadow: -3px 3px 3px rgba(0, 0, 0, 0.7);
+  font-size: 8em;
+  text-align: center;
+  font-family: "IbarraRealNova";
+  font-weight: bold;
+  margin-bottom: -123px;
+}
+
+.text h2 {
+  color: white;
+  text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.7);
+  font-size: 4em;
+  text-align: center;
+  font-family: "IbarraRealNova";
+  font-weight: bold;
+}
+
+.text h3 {
+  color: white;
+  text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.897);
+  font-size: 2em;
+  text-align: center;
+  font-family: "IbarraRealNova";
+  font-weight: bold;
+}
+
+.torch {
+  margin: -150px 0 0 -150px;
+  width: 500px;
+  height: 500px;
+  -webkit-box-shadow: 0 0 0 9999em #000000f7;
+          box-shadow: 0 0 0 9999em #000000f7;
+  opacity: 1;
+  border-radius: 50%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.torch:after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  -webkit-box-shadow: inset 0 0 40px 2px #000, 0 0 20px 4px rgba(13, 13, 10, 0.2);
+          box-shadow: inset 0 0 40px 2px #000, 0 0 20px 4px rgba(13, 13, 10, 0.2);
+}
+/*# sourceMappingURL=style.css.map */

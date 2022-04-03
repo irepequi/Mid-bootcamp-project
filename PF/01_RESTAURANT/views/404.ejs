@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACOMER</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/images/web/logo.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <!-- JAVASCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).mousemove(function (event) {
+        $(".torch").css({
+          top: event.pageY,
+          left: event.pageX,
+        });
+      });
+    </script>
+
+    <script></script>
+  </head>
+  <body class="not_found">
+    <div class="text">
+      <h1>404</h1>
+      <h2>¡Oh, Ohh!</h2>
+      <h3>
+        Lo sentimos,<br />
+        no podemos encontrar lo que buscas<br />
+        porque está muy oscuro.
+      </h3>
+    </div>
+    <div class="torch"></div>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+  @import "mixin";
+  @import "variables";
+  
+  
+  * {
+    box-sizing: border-box;
+
+    // para subrayar en rojo  
+    ::selection {
+      background-color: $red;
+      color:#ffffff;
+    }
+  }
+
+  @font-face {
+        font-family: IbarraRealNova;
+        src: url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap");
+        
+        font-family: Montserrat;
+        src: url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+  }
+    
+
+
+  // INDEX ---------------------------------------------------------------------
+    body {
+      font-family: 'Montserrat' !important;
+      background-color: #eaeffa !important;
+    }
+    
+    .header {
+      //@include background ("/images/web/bg_1.jpg");
+      height: 100vh;
+      padding: 10vw;
+
+        h1 {
+          font-family: 'IbarraRealNova' !important;
+          //font-weight: bold;
+          font-size: 100px;
+        }
+
+        .carousel {
+          margin-top: -292px;
+          margin-left: 334px;
+          
+          img {
+            width: 500px !important;
+          }
+        }
+        
+        .quote {
+          .quote_symbol {
+            transform: rotate(180deg);
+            
+            span {
+              font-size: 80px;
+              color: $red;
+            }
+          }
+
+          p {
+            text-align: right;
+          }
+        }
+        .signature {
+          img {
+            margin-top: 16vw;
+            margin-left: -106px;
+          }
+        }
+    }
+
+  // FORM ----------------------------------------------------------------------
+  .formRight {
+    display: flex;
+    align-items: center;
+    
+    form {
+      margin-left: 2vw !important;
+      margin-right: 2vw !important;
+
+      h2 {
+        margin-bottom: 2vw;
+      }
+
+      input, textarea {
+        @include input;
+      }
+    }
+
+    button { 
+      @include red_button;
+    }
+
+    button:hover { 
+      @include red_button_hover;
+    }
+
+    a {
+      @include azul_oscuro_button;
+    }
+
+    a:hover {
+      @include azul_oscuro_button_hover;
+    }
+  }
+
+  .selectFormRight {
+    
+    .select {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 2vw;
+      padding-right: 2vw;
+
+      h2 {
+        margin-bottom: 2vw;
+      }
+
+      select {
+        $form-select-color: $input-color !important;
+        $form-select-indicator-color: $gray-800 !important;
+      }
+
+      form {
+        margin-top: 4vw;
+
+        input, textarea {
+          @include input;
+        }
+      }
+
+      button { 
+        @include red_button;
+      }
+
+      button:hover { 
+        @include red_button_hover;
+      }
+
+      a {
+        @include azul_oscuro_button;
+      }
+
+      a:hover {
+        @include azul_oscuro_button_hover;
+      }
+    }
+  }
+
+  .img_formChef {
+    @include background ("/images/web/img_formChef.jpg");
+    height: 100vh;
+  }
+
+  .img_formDish {
+    @include background ("/images/web/img_formDish.jpg");
+    height: 100vh;
+  }
+  
+  .img_formLogin {
+    @include background ("/images/web/img_formLogin.jpg");
+    background-position: bottom !important;
+    height: 100vh;
+  }
+
+  .img_editChef {
+    @include background ("/images/web/img_editChef.jpg");
+    height: 100vh;
+  }
+
+  .img_editDish {
+    @include background ("/images/web/img_editDish.jpg");
+    height: 100vh;
+  }
+
+  .img_selectChef {
+    @include background ("/images/web/img_selectChef.jpg");
+    height: 100vh;
+  }
+
+  //  404 ----------------------------------------------------------------------
+  .not_found {
+    @include background_dark ("/images/web/404.jpg"); 
+    overflow: hidden;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .text { 
+    h1{
+      color: $red;
+      text-shadow: -3px 3px 3px rgba(0,0,0,0.7);
+      font-size: 8em;
+      text-align: center;
+      font-family: "IbarraRealNova";
+      font-weight: bold;
+      margin-bottom: -123px;
+    }
+
+    h2 {
+      color: white;
+      text-shadow: -2px 2px 3px rgba(0,0,0,0.7);
+      font-size: 4em;
+      text-align: center;
+      font-family: "IbarraRealNova";
+      font-weight: bold;
+    }
+
+    h3 {
+      color: white;
+      text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.897);
+      font-size: 2em;
+      text-align: center;
+      font-family: "IbarraRealNova";
+      font-weight: bold;
+    }
+  }
+
+  .torch {
+    margin: -150px 0 0 -150px;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 0 0 9999em #000000f7;
+    opacity: 1;
+    border-radius: 50%;
+    position: fixed;
+    background: rgba(0,0,0,0.3);
+    
+    &:after {
+      content: '';
+      display: block;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      box-shadow: inset 0 0 40px 2px #000,
+        0 0 20px 4px rgba(13,13,10,0.2);  
+    }
+  }
+  
