@@ -1,9 +1,160 @@
+@charset "UTF-8";
 /* MEASURE */
 /* COLORS */
 /* BACKGROUNDS */
 /* MEASURE */
 /* COLORS */
 /* BACKGROUNDS */
+/* LAPTOP */
+/* Portrait */
+/* TABLET */
+/* Portrait */
+@media (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .header .signature img {
+    margin-top: -4vw !important;
+    margin-left: 327px !important;
+  }
+  .header .carousel {
+    margin-top: -163px !important;
+    margin-left: -329px !important;
+  }
+  .header .carousel img {
+    width: 700px !important;
+  }
+  .welcome {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(0, 0, 0, 0.6))), url("/images/web/bg_1.jpg") !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 50%), url("/images/web/bg_1.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+  .welcome .welcomeTexto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    margin-bottom: 4vw;
+  }
+  .welcome .welcomeTexto p {
+    padding-left: 31vw !important;
+  }
+  .restaurant {
+    height: 50vh !important;
+  }
+  .favChef .oneChef {
+    margin-bottom: 4vw;
+  }
+  .img_editChef {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_editDish {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_formChef {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_formDish {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_formLogin {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_selectChef {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .formRight, .select {
+    height: 60vh !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .formRight form, .select form {
+    margin-left: 2vw !important;
+    margin-right: 2vw !important;
+  }
+}
+
+/* MOBILE 📱 */
+/* Portrait */
+@media (max-width: 767px) and (orientation: portrait) {
+  .header h1 {
+    font-size: 3em !important;
+  }
+  .header .signature img {
+    margin-top: -11vw !important;
+    margin-left: 0 !important;
+  }
+  .header .carousel {
+    margin-top: -102px !important;
+    margin-left: -291px !important;
+  }
+  .header .carousel img {
+    width: 275px !important;
+  }
+  .welcome {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(0, 0, 0, 0.6))), url("/images/web/bg_1.jpg") !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 50%), url("/images/web/bg_1.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+  .restaurant {
+    height: 50vh !important;
+  }
+  .favChef .oneChef {
+    margin-bottom: 4vw;
+  }
+  .img_editChef {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_editDish {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_formChef {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_formDish {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_formLogin {
+    height: 40vh !important;
+    background-position: top !important;
+  }
+  .img_selectChef {
+    height: 40vh !important;
+    background-position: bottom !important;
+    margin-bottom: 4vw;
+  }
+  .formRight, .select {
+    height: 60vh !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .formRight form, .select form {
+    margin-left: 2vw !important;
+    margin-right: 2vw !important;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -39,7 +190,8 @@ body {
 
 .header h1 {
   font-family: 'IbarraRealNova' !important;
-  font-size: 100px;
+  font-weight: bold;
+  font-size: 6.5em;
 }
 
 .header .carousel {
@@ -192,6 +344,10 @@ body {
 
 .imgArriba img {
   width: 80px;
+}
+
+footer div {
+  text-align: center;
 }
 
 footer hr {
@@ -425,9 +581,13 @@ footer input, footer textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
 }
 
 .formRight form {
@@ -443,6 +603,7 @@ footer input, footer textarea {
   border-radius: 10px;
   border: 0;
   background-color: #d8dde6 !important;
+  resize: none !important;
 }
 
 .formRight button {

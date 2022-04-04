@@ -22,9 +22,11 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row formRight">
-        <div class="col-5 img_editDish"></div>
-        <div class="col-7">
+      <div class="row">
+        <div
+          class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 img_editDish"
+        ></div>
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12 formRight">
           <form
             action="/dish/saveChangesDish/<%= result[0].dish_id %>/<%= result[0].chef_id %>"
             method="post"

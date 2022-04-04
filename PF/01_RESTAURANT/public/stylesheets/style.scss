@@ -1,6 +1,195 @@
   @import "mixin";
   @import "variables";
   
+
+
+  /* LAPTOP */
+  /* Portrait */
+  @media (min-width: 992px) and (max-width: 1199px) and (orientation: portrait) {
+    
+  }
+
+  /* TABLET */
+  /* Portrait */
+  @media (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    //index
+    .header{
+      .signature {
+        img {
+          margin-top: -4vw !important;
+          margin-left: 327px !important;
+        }
+      }
+
+      .carousel{
+        margin-top: -163px !important;
+        margin-left: -329px !important;
+
+        img{
+          width: 700px !important;
+        }
+      }
+    }
+
+    .welcome {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, hsla(0, 0%, 0%, 0.6) 50%), url("/images/web/bg_1.jpg") !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: cover !important;
+
+      .welcomeTexto {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 4vw;
+
+        p {
+          padding-left: 31vw !important;
+        }
+      }
+    }
+
+    
+    .restaurant {
+      height: 50vh !important;
+    }
+
+    .favChef {
+      .oneChef {
+        margin-bottom: 4vw;
+      }
+    }
+    
+    // form 
+    .img_editChef {
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_editDish {
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_formChef {
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_formDish{
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_formLogin{
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_selectChef {
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .formRight, .select {
+      height: 60vh !important;
+      display: flex !important;
+      align-items: center !important;
+      
+      form {
+        margin-left: 2vw !important;
+        margin-right: 2vw !important;
+      }
+    }
+  }
+
+  /* MOBILE 📱 */
+  /* Portrait */
+  @media (max-width: 767px) and (orientation:portrait) {
+    //index
+    .header{
+      h1 {
+        font-size: 3em !important;
+      }
+
+      .signature {
+        img {
+          margin-top: -11vw !important;
+          margin-left: 0 !important;
+        }
+      }
+
+      .carousel{
+        margin-top: -102px !important;
+        margin-left: -291px !important;
+
+        img{
+          width: 275px !important;
+        }
+      }
+    }
+
+    .welcome {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, hsla(0, 0%, 0%, 0.6) 50%), url("/images/web/bg_1.jpg") !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: cover !important;
+    }
+
+    .restaurant {
+      height: 50vh !important;
+    }
+
+    .favChef {
+      .oneChef {
+        margin-bottom: 4vw;
+      }
+    }
+
+    // form 
+    .img_editChef {
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_editDish {
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_formChef {
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_formDish{
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_formLogin{
+      height: 40vh !important;
+      background-position: top !important;
+    }
+
+    .img_selectChef {
+      height: 40vh !important;
+      background-position: bottom !important;
+      margin-bottom: 4vw;
+    }
+
+    .formRight, .select {
+      height: 60vh !important;
+      display: flex !important;
+      align-items: center !important;
+      
+      form {
+        margin-left: 2vw !important;
+        margin-right: 2vw !important;
+      }
+    }
+  }
+
+
   
   * {
     box-sizing: border-box;
@@ -37,8 +226,8 @@
 
       h1 {
         font-family: 'IbarraRealNova' !important;
-        //font-weight: bold;
-        font-size: 100px;
+        font-weight: bold;
+        font-size: 6.5em;
       }
 
       .carousel {
@@ -172,6 +361,9 @@
 
   // FOOTER ____________________________________________________________________
   footer {
+    div {
+      text-align: center;
+    }
 
     hr {
       background-color: white;
@@ -286,7 +478,8 @@
   
   .formRight {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
     
     form {
       margin-left: 2vw !important;
@@ -298,6 +491,7 @@
 
       input, textarea {
         @include input;
+        resize: none !important;
       }
     }
 
