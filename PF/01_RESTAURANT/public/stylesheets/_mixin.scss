@@ -117,7 +117,6 @@
             &:hover{
                 .card-info{
                     opacity: 1;
-                    padding: 4vw !important;
                 }
                 .color-overlay{
                     background: rgba(213, 60, 60, 0.8); // $red
@@ -130,6 +129,12 @@
             font-family: 'IbarraRealNova';
             font-style: 16px;
             position: absolute;
+            height: $card_chef_preview;
+            width: $card_chef_preview !important;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 3vw !important;
             z-index: 20;
             opacity: 0;
             transition: bottom .3s, opacity .3s cubic-bezier(.33,.66,.66,1);

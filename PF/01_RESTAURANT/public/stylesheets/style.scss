@@ -146,90 +146,19 @@
     padding-top: 4vw;
     padding-bottom: 4vw;
 
-    img {
-      width: 200px;
+    .col-lg-4 {
+      display: flex;
+      justify-content: center;
     }
 
-    .card {
-        box-shadow: 0px 4px 8px 0px #BDBDBD
+    h2 {
+      padding-bottom: 2vw;
+      font-family: 'IbarraRealNova';
+      font-size: 3em;
+      font-weight: bold;
+      text-align: center;
     }
-
-    .profile-pic {
-        width: 100px !important;
-        height: 100px;
-        box-shadow: 0px 4px 8px 0px #BDBDBD
-    }
-
-    .owl-carousel .owl-nav button.owl-next,
-    .owl-carousel .owl-nav button.owl-prev {
-        background: 0 0;
-        color: #1E88E5 !important;
-        border: none;
-        padding: 5px 20px !important;
-        font: inherit;
-        font-size: 50px !important
-    }
-
-    .owl-carousel .owl-nav button.owl-next:hover,
-    .owl-carousel .owl-nav button.owl-prev:hover {
-        color: #0D47A1 !important;
-        background-color: transparent !important
-    }
-
-    .owl-dots {
-        display: none
-    }
-
-    button:focus {
-        -moz-box-shadow: none !important;
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        outline-width: 0
-    }
-
-    .item {
-        display: none
-    }
-
-    .next {
-        display: block !important;
-        position: relative;
-        transform: scale(0.8);
-        transition-duration: 0.3s;
-        opacity: 0.6
-    }
-
-    .prev {
-        display: block !important;
-        position: relative;
-        transform: scale(0.8);
-        transition-duration: 0.3s;
-        opacity: 0.6
-    }
-
-    .item.show {
-        display: block;
-        transition-duration: 0.4s
-    }
-
-    @media screen and (max-width: 999px) {
-
-        .next,
-        .prev {
-            transform: scale(1);
-            opacity: 1
-        }
-
-        .item {
-            display: block !important
-        }
-    }
-
-
-
   }
-
-
 
   // BOTON ARRIBA ______________________________________________________________
   .imgArriba {
@@ -255,10 +184,16 @@
       font-family: 'IbarraRealNova';
       font-size: 1.3em;
       font-weight: bold;
+      color: rgba(0,0,0,.7);
     }
 
     p {
       font-size: 0.9em;
+      color: rgba(0,0,0,.7);
+    }
+
+    img {
+      width: 50%;
     }
 
     .copy {
@@ -275,7 +210,7 @@
   //  CHEF ---------------------------------------------------------------------
   .allChef {
     div {
-       display: flex;
+      display: flex;
       justify-content: center;
     }
   }
@@ -333,7 +268,6 @@
     background-color: transparent !important;
   }
   
-
   // efecto hover rojo
   @include red_hover;
 
