@@ -25,6 +25,18 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
+    <!-- CAROUSEL -->
+    <script src="/javascript/carousel.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -155,13 +167,86 @@
       <div class="row restaurant"></div>
 
       <!-- SECTION 4 - CHEF FAV -->
-      <div class="row favChef"></div>
+      <div class="row favChef">
+        <h4 class="mb-5 font-weight-bold">What Our Client Say</h4>
+        <div class="owl-carousel owl-theme">
+          <div class="item first prev">
+            <div class="card border-0 py-3 px-4">
+              <div class="row justify-content-center">
+                <img
+                  src="https://i.imgur.com/gazoShk.jpg"
+                  class="img-fluid profile-pic mb-4 mt-3"
+                />
+              </div>
+              <h6 class="mb-3 mt-2">Marielle Haag</h6>
+              <p class="content mb-5 mx-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua Ut
+                enim.
+              </p>
+            </div>
+          </div>
+          <div class="item show">
+            <div class="card border-0 py-3 px-4">
+              <div class="row justify-content-center">
+                <img
+                  src="https://i.imgur.com/oW8Wpwi.jpg"
+                  class="img-fluid profile-pic mb-4 mt-3"
+                />
+              </div>
+              <h6 class="mb-3 mt-2">Ximena Vegara</h6>
+              <p class="content mb-5 mx-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua Ut
+                enim.
+              </p>
+            </div>
+          </div>
+          <div class="item next">
+            <div class="card border-0 py-3 px-4">
+              <div class="row justify-content-center">
+                <img
+                  src="https://i.imgur.com/ndQx2Rg.jpg"
+                  class="img-fluid profile-pic mb-4 mt-3"
+                />
+              </div>
+              <h6 class="mb-3 mt-2">John Paul</h6>
+              <p class="content mb-5 mx-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua Ut
+                enim.
+              </p>
+            </div>
+          </div>
+          <div class="item last">
+            <div class="card border-0 py-3 px-4">
+              <div class="row justify-content-center">
+                <img
+                  src="https://i.imgur.com/T5aOhwh.jpg"
+                  class="img-fluid profile-pic mb-4 mt-3"
+                />
+              </div>
+              <h6 class="mb-3 mt-2">William Doe</h6>
+              <p class="content mb-5 mx-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua Ut
+                enim.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- BOTON ARRIBA -->
-      <a href="#inicio"><img src="/images/web/arriba.png" alt="" /></a>
+      <a href="#inicio" class="imgArriba"
+        ><img src="/images/web/arriba.png" alt=""
+      /></a>
 
       <!-- FIN CONTAINER -->
     </div>
+
+    <!-- FOOTER -->
+    <div class="container"><%- include('footer') %></div>
 
     <!-- SCRIPT BOOTSTRAP -->
     <script

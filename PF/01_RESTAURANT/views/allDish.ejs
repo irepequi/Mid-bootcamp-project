@@ -30,7 +30,7 @@
     <div class="container-fluid">
       <div class="row">
         <!-- NAVBAR -->
-        <div class="col-12"><%- include('navbarDish') %></div>
+        <div class="col-12" id="inicio"><%- include('navbarDish') %></div>
       </div>
       <!-- platos -->
       <div class="row">
@@ -46,7 +46,17 @@
         </div>
         <% }) %>
       </div>
+
+      <!-- BOTON ARRIBA -->
+      <a href="#inicio" class="imgArriba"
+        ><img src="/images/web/arriba.png" alt=""
+      /></a>
+
+      <!-- FIN CONTAINER -->
     </div>
+
+    <!-- FOOTER -->
+    <div class="container"><%- include('footer') %></div>
 
     <!-- SCRIPT BOOTSTRAP -->
     <script
