@@ -33,75 +33,85 @@
         <div class="col-12"><%- include('navbarChef') %></div>
       </div>
       <!-- chef -->
-      <div class="row">
-        <div class="col-12">
-          <div class="card" style="width: 18rem">
-          <img
-            src="/images/chefs/<%= resultChef[0].img %>"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title"><%= resultChef[0].chef_name %> <%= resultChef[0].last_name %></h5>
-            <p class="card-text"><%= resultChef[0].chef_description %></p>
-            <p class="card-text"><%= resultChef[0].email %></p>
-            <p class="card-text"><%= resultChef[0].phone %></p>
-            
-            <!-- botones -->
-            <a
-              href="/dish/form/<%= resultChef[0].chef_id %>"
-              class="btn btn-primary" alt="Añadir plato">
-              <span class="material-icons">add</span>
-              <span class="material-icons">restaurant</span>
-            </a>
-              
-            <a
-              href="/chef/showEditForm/<%= resultChef[0].chef_id %>"
-              class="btn btn-warning"
-              >
-              <span class="material-icons">edit</span>
-            </a>
-            
-            <a
-              href="/chef/logicDelete/<%= resultChef[0].chef_id %>"
-              class="btn btn-danger"
-              >
-              <span class="material-icons">person_remove</span>
-            </a>
+      <div class="row profileChef">
+        <div class="col-lg-3">
+          <div class="oneChef">
+            <div class="imgChef">
+              <img
+                class="card-img w-100"
+                src="/images/chefs/<%= resultChef[0].img %>"
+                alt=""
+              />
+            </div>
+            <div class="card-info">
+              <h5><%= resultChef[0].chef_name %> <%= resultChef[0].last_name %></h5>
+              <p><%= resultChef[0].chef_description %></p>
+            </div>
+            <div class="gradient-overlay"></div>
+            <div class="color-overlay"></div>
           </div>
+
+            <!-- botones -->
+            <div class="botones">
+              <a
+                href="/dish/form/<%= resultChef[0].chef_id %>"
+                class="btn addDish" alt="Añadir plato">
+                <span class="material-icons">add</span>
+                <span class="material-icons" style="margin-left: -11px;">restaurant</span>
+              </a>
+                
+              <a
+                href="/chef/showEditForm/<%= resultChef[0].chef_id %>"
+                class="btn edit"
+                >
+                <span class="material-icons">edit</span>
+              </a>
+              
+              <a
+                href="/chef/logicDelete/<%= resultChef[0].chef_id %>"
+                class="btn deleteChef"
+                >
+                <span class="material-icons">person_remove</span>
+              </a>
+            </div>
+            
         </div>
+
+        <!-- platos del chef -->
+        <div class="col-lg-8">
+          <div class="d-flex flex-wrap ms-5 mt-4">
+            <% resultDish.forEach(dish => { %>
+              <div class="card m-2" style="width: 18rem">
+                <img
+                  src="/images/dishes/<%= dish.dish_img %>"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><%= dish.dish_name %></h5>
+                  <p class="card-text"><%= dish.dish_description %></p>
+                  
+                  <!-- botones -->
+                  <a href="/dish/editDish/<%= dish.dish_id %>" class="btn edit"
+                    >
+                    <span class="material-icons">edit</span>
+                  </a>
+                  <a
+                    href="/dish/logicDeleteDish/<%= dish.dish_id %>/<%= dish.chef_id %>"
+                    class="btn deleteDish"
+                    >
+                    <span class="material-icons">restaurant</span>
+                    <span class="material-icons" style="margin-left: -8px;">remove</span>
+                  </a>
+                </div>
+              </div>
+            <% }) %>
+          </div>
         </div>
         
       </div>
 
-    <div class="d-flex m-5">
-      <% resultDish.forEach(dish => { %>
-      <div class="card" style="width: 18rem">
-        <img
-          src="/images/dishes/<%= dish.dish_img %>"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title"><%= dish.dish_name %></h5>
-          <p class="card-text"><%= dish.dish_description %></p>
-          
-          <!-- botones -->
-          <a href="/dish/editDish/<%= dish.dish_id %>" class="btn btn-warning"
-            >
-            <span class="material-icons">edit</span>
-          </a>
-          <a
-            href="/dish/logicDeleteDish/<%= dish.dish_id %>/<%= dish.chef_id %>"
-            class="btn btn-danger"
-            >
-            <span class="material-icons">restaurant</span>
-            <span class="material-icons">remove</span>
-          </a>
-        </div>
-      </div>
-      <% }) %>
-    </div>
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

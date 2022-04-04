@@ -28,10 +28,12 @@
     background-color: #eaeffa !important;
   }
   
+  //  HEADER ___________________________________________________________________
   .header {
     //@include background ("/images/web/bg_1.jpg");
     height: 100vh;
     padding: 10vw;
+    padding-bottom: -4vw;
 
       h1 {
         font-family: 'IbarraRealNova' !important;
@@ -70,78 +72,155 @@
       }
   }
 
+  // SECTION 1 - BIENVENIDO ____________________________________________________
+  .welcome {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, hsla(0, 0%, 0%, 0.6) 70%), url("/images/web/bg_1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .welcomeTexto {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 4vw !important;
+
+    h2 {
+      color: white;
+      font-size: 3em;
+      font-family: 'IbarraRealNova';
+      text-align: end;
+    }
+
+    p {
+      color: white;
+      font-size: 1.75em;
+      font-family: 'IbarraRealNova';
+      text-align: end;
+    }
+
+    button {
+      @include blanco_button;
+    }
+
+    button:hover {
+      @include blanco_button_hover;
+    }
+  }
+
+  // SECTION 2 - ALGO PARA COMER? ______________________________________________
+  .dishes{
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    text-align: center;
+    
+    h2 {
+      padding-bottom: 2vw;
+      font-family: 'IbarraRealNova';
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    h5 {
+      padding-left: 6vw;
+      padding-right: 6vw;
+    }
+
+    .imgEat{
+      width: 300px;
+    }
+  }
+
+  // SECTION 3 - IMG FONDO _____________________________________________________
+  .restaurant {
+    @include background ("/images/web/404.jpg");
+    height: 20vw;
+    position: sticky;
+  }
+
+  // SECTION 4 - CHEF FAV_______________________________________________________
+  .favChef {
+    
+  }
+
   //  CHEF ---------------------------------------------------------------------
   .allChef {
     div {
        display: flex;
       justify-content: center;
     }
+  }
 
-    a {
-      display: flex;
-      justify-content: center;
-      height: $card_chef_preview;
-      width: $card_chef_preview !important;
-      
-      img {
-        object-fit: cover;
-      }
-    }
-
+  // perfil del chef
+  .profileChef {
     .oneChef {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
+      margin: 2vw;
       
-      h3 {
-        color:white;
-      }
-
-      .color-overlay{
-        background: rgba(213, 60, 60, 0); // $red
-        height: $card_chef_preview;
-        width: $card_chef_preview !important;
-        position: absolute;
-        z-index: 10;
-        transition: background .3s cubic-bezier(.33,.66,.66,1);
-      }
-      
-      .gradient-overlay{
-        background-image: linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 80%);
-        height: $card_chef_preview;
-        width: $card_chef_preview !important;
-        position: absolute;
-        z-index: 15;
-      }
-      
-      &:hover{
-        
-        .card-info{
-          opacity: 1;
-        }
-        .color-overlay{
-          background: rgba(213, 60, 60, 0.8); // $red
-        }
+      .card-info {
+        padding: 40px;
       }
     }
 
-    .card-info{
-      position: absolute;
-      color: white;
-      font-family: 'IbarraRealNova';
-      font-style: 16px;
-      z-index: 20;
-      opacity: 0;
-      transition: bottom .3s, opacity .3s cubic-bezier(.33,.66,.66,1);
+    .botones {
+      padding-left: 2vw;
     }
 
-    // responsive
-    .col-xs-12 {
-      display: flex;
-      justify-content: center;
+    .addDish{
+      @include red_button;
+      padding-left: 8px;
     }
+
+    .addDish:hover{
+      @include red_button_hover;
+    }
+
+    .edit {
+      @include red_button;
+    }
+
+    .edit:hover {
+      @include red_button_hover;
+    }
+
+    .deleteChef {
+      @include azul_oscuro_button;
+    }
+
+    .deleteChef:hover {
+      @include azul_oscuro_button_hover;
+    }
+
+    .deleteDish {
+      @include azul_oscuro_button;
+    }
+
+    .deleteDish:hover {
+      @include azul_oscuro_button_hover;
+    }
+  }
+
+  .card {
+    border: 0 !important;
+    background-color: transparent !important;
+  }
+  
+
+  // efecto hover rojo
+  @include red_hover;
+
+  // responsive
+  .col-xs-12 {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  // PROFILE CHEF
+  .oneChef {
+
   }
 
   // FORM ----------------------------------------------------------------------

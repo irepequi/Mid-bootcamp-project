@@ -76,7 +76,7 @@ class ChefController {
     });
   };
 
-  //  Muestra la vista del formulario de edición de usuario
+  //  Muestra la vista del formulario de edición de chef
   showEditForm = (req, res) => {
     let chef_id = req.params.chef_id;
     let sql = `SELECT * FROM chef WHERE chef_id = ${chef_id}`;
@@ -87,7 +87,7 @@ class ChefController {
     });
   };
 
-  // Guarda los cambios del formulario de edición de cliente
+  // Guarda los cambios del formulario de edición de chef
   saveChangesChef = (req, res) => {
     let chef_id = req.params.chef_id;
     let { chef_name, last_name, email, password, phone, chef_description } =

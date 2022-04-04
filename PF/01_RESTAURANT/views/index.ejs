@@ -30,7 +30,7 @@
     <div class="container-fluid">
       <div class="row">
         <!-- NAVBAR -->
-        <div class="col-12"><%- include('navbar') %></div>
+        <div class="col-12" id="inicio"><%- include('navbar') %></div>
       </div>
       <!-- HEADER -->
       <header class="row header">
@@ -91,9 +91,76 @@
         </div>
       </header>
 
-      <div class="row">
-        <!-- result.forEach(chef => { -->
+      <!-- SECTION 1 - BIENVENIDO -->
+      <div class="row welcome">
+        <div class="col-lg-7"></div>
+        <div class="col-lg-5 welcomeTexto">
+          <h2>¡Hola! ¿Tienes hambre?</h2>
+          <p>
+            Pídenos una mesa y degusta los exquisitos platos de nuestros chefs.
+          </p>
+          <button>Pedir mesa</button>
+        </div>
       </div>
+
+      <!-- SECTION 2 - ALGO PARA COMER? -->
+      <div class="row dishes">
+        <div class="col-lg-12">
+          <h2>¿Algo para comer?</h2>
+        </div>
+
+        <div class="col-lg-4">
+          <h5 class="card-title">
+            Para abrir boca elige la
+            <span class="text-lowercase"><%= resultDish[4].dish_name %></span>.
+          </h5>
+          <a href="/chef/profile/<%= resultDish[4].chef_id %>">
+            <img
+              src="/images/dishes/<%= resultDish[4].dish_img %>"
+              class="imgEat"
+            />
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <h5 class="card-title">
+            Te recomendamos el
+            <span class="text-lowercase"><%= resultDish[0].dish_name %></span>
+            de primer plato.
+          </h5>
+          <a href="/chef/profile/<%= resultDish[0].chef_id %>">
+            <img
+              src="/images/dishes/<%= resultDish[0].dish_img %>"
+              class="imgEat"
+            />
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <h5 class="card-title">
+            ¿Y qué tal unas
+            <span class="text-lowercase"><%= resultDish[1].dish_name %></span>
+            de postre?
+          </h5>
+          <a href="/chef/profile/<%= resultDish[1].chef_id %>">
+            <img
+              src="/images/dishes/<%= resultDish[1].dish_img %>"
+              class="imgEat"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- SECTION 3 - IMG FONDO -->
+      <div class="row restaurant"></div>
+
+      <!-- SECTION 4 - CHEF FAV -->
+      <div class="row favChef"></div>
+
+      <!-- BOTON ARRIBA -->
+      <a href="#inicio"><img src="/images/web/arriba.png" alt="" /></a>
+
+      <!-- FIN CONTAINER -->
     </div>
 
     <!-- SCRIPT BOOTSTRAP -->

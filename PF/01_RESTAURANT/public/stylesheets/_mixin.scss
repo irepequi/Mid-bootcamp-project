@@ -18,22 +18,6 @@
     }
 
     // BUTTONS
-    @mixin azul_oscuro_button {
-        border: solid 2px $azul_oscuro;
-        border-radius: 4px;
-        color: $azul_oscuro;
-        background-color: transparent;
-        padding: 8px 15px;
-    } 
-
-    @mixin azul_oscuro_button_hover {
-        border: solid 2px $azul_oscuro;
-        border-radius: 4px;
-        color: $gris_claro;
-        background-color: $azul_oscuro;
-        transition: 0.2s;
-    }
-
     @mixin red_button {
         border: solid 2px $red;
         border-radius: 4px;
@@ -50,6 +34,39 @@
         transition: 0.2s;
     }
 
+    @mixin azul_oscuro_button {
+        border: solid 2px $azul_oscuro;
+        border-radius: 4px;
+        color: $azul_oscuro;
+        background-color: transparent;
+        padding: 8px 15px;
+    } 
+
+    @mixin azul_oscuro_button_hover {
+        border: solid 2px $azul_oscuro;
+        border-radius: 4px;
+        color: $gris_claro;
+        background-color: $azul_oscuro;
+        transition: 0.2s;
+    }
+
+    @mixin blanco_button {
+        border: solid 2px white;
+        border-radius: 4px;
+        color: white;
+        background-color: transparent;
+        padding: 8px 15px;
+    } 
+
+    @mixin blanco_button_hover {
+        border: solid 2px white;
+        border-radius: 4px;
+        color: $azul_oscuro;
+        background-color: white;
+        padding: 8px 15px;
+        transition: 0.2s;
+    }
+
     // STYLE INPUTS
     @mixin input{
         border-radius: 10px;
@@ -57,8 +74,64 @@
         background-color: $gris_form !important;
     }
 
-    //STYLE TEXTS
-    @mixin h3_azul_oscuro {
-        color: $azul_oscuro;
-        text-transform: uppercase;
+    // EFECTO HOVER ROJO
+    @mixin red_hover{
+        .imgChef {
+            display: flex;
+            justify-content: center;
+            height: $card_chef_preview;
+            width: $card_chef_preview !important;
+            
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .oneChef {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            height: $card_chef_preview;
+            width: $card_chef_preview !important;
+            color:white;
+
+            .color-overlay{
+                background: rgba(213, 60, 60, 0); // $red
+                height: $card_chef_preview;
+                width: $card_chef_preview !important;
+                position: absolute;
+                z-index: 10;
+                transition: background .3s cubic-bezier(.33,.66,.66,1);
+            }
+            
+            .gradient-overlay{
+                background-image: linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.6) 80%);
+                height: $card_chef_preview;
+                width: $card_chef_preview !important;
+                position: absolute;
+                z-index: 15;
+            }
+            
+            &:hover{
+                .card-info{
+                    opacity: 1;
+                    padding: 4vw !important;
+                }
+                .color-overlay{
+                    background: rgba(213, 60, 60, 0.8); // $red
+                }
+            }
+        }
+
+        .card-info{
+            color: white;
+            font-family: 'IbarraRealNova';
+            font-style: 16px;
+            position: absolute;
+            z-index: 20;
+            opacity: 0;
+            transition: bottom .3s, opacity .3s cubic-bezier(.33,.66,.66,1);
+        }
     }

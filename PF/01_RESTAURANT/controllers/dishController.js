@@ -19,10 +19,6 @@ class DishController {
       if (error) throw error;
       res.render("selectChef", { result });
     });
-    /*
-    let chef_id = req.params.chef_id;
-    res.render("selectChef", { chef_id });
-    */
   };
 
   //  Muestra el formulario de crear platos
