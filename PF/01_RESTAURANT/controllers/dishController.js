@@ -21,6 +21,23 @@ class DishController {
     });
   };
 
+  // Guarda select un nuevo plato
+  saveSelectChef = (req, res) => {
+    let { dish_name, dish_description, chef_id } = req.body;
+
+    let sql = `INSERT INTO dish (dish_name, dish_description, chef_id) VALUES ('${dish_name}', '${dish_description}', '${chef_id}') `;
+
+    if (req.file != undefined) {
+      let dish_img = req.file.filename;
+      sql = `INSERT INTO dish (dish_name, dish_description, chef_id, dish_img) VALUES ('${dish_name}', '${dish_description}', '${chef_id}', '${dish_img}') `;
+    }
+
+    connection.query(sql, (error, result) => {
+      if (error) throw error;
+      res.redirect(`/chef/profile/${chef_id}`);
+    });
+  };
+
   //  Muestra el formulario de crear platos
   form = (req, res) => {
     let chef_id = req.params.chef_id;

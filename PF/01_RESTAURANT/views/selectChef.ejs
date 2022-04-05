@@ -36,24 +36,28 @@
           <h2>Selecciona el chef que creará un plato</h2>
           <div class="row">
             <div class="col-lg-6">
-              <!-- select chefs -->
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Elige el chef</option>
-
-                <% result.forEach(chef => { %>
-                <option value="<%= chef.chef_id %>">
-                  <%= chef.chef_name %> <%= chef.last_name %>
-                </option>
-                <% }) %>
-              </select>
-
               <!-- form dish -->
               <form
-                action="/dish/saveDish/<%= result[0].chef_id %>"
+                action="/dish/saveSelectChef"
                 method="post"
                 enctype="multipart/form-data"
                 class="form"
               >
+                <!-- select chefs -->
+                <select
+                  name="chef_id"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option>Elige el chef</option>
+
+                  <% result.forEach(chef => { %>
+                  <option value="<%= chef.chef_id %>">
+                    <%= chef.chef_name %> <%= chef.last_name %>
+                  </option>
+                  <% }) %>
+                </select>
+
                 <h2>Crear el plato</h2>
 
                 <div class="form-floating mb-3">

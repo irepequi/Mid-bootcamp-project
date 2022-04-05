@@ -6,8 +6,22 @@ const router = express.Router();
 // Ruta base : localhost:3000/dish
 router.get("/", dishController.showAllDish);
 
-// localhost:3000/dish/form/:chef_id
+// localhost:3000/dish/selectChef
 router.get("/selectChef", dishController.selectChef);
+
+// localhost:3000/dish/saveDish/:chef_id
+router.post(
+  "/saveSelectChef",
+  uploadImage("dishes"),
+  dishController.saveSelectChef
+);
+
+// localhost:3000/dish/saveDish/:chef_id
+router.post(
+  "/saveSelectChef",
+  uploadImage("dishes"),
+  dishController.saveSelectChef
+);
 
 // localhost:3000/dish/form/:chef_id
 router.get("/form/:chef_id", dishController.form);
