@@ -68,7 +68,7 @@
   }
   .img_selectChef {
     height: 40vh !important;
-    background-position: top !important;
+    background-position: center !important;
   }
   .formRight, .select {
     height: 60vh !important;
@@ -152,6 +152,10 @@
   .formRight form, .select form {
     margin-left: 2vw !important;
     margin-right: 2vw !important;
+  }
+  .selectFormRight .select {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
   }
 }
 
@@ -659,8 +663,8 @@ footer input, footer textarea {
   margin-bottom: 2vw;
 }
 
-.selectFormRight .select form {
-  margin-top: 4vw;
+.selectFormRight .select select {
+  margin-bottom: 2vw;
 }
 
 .selectFormRight .select form input, .selectFormRight .select form textarea {

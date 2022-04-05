@@ -87,7 +87,7 @@
 
     .img_selectChef {
       height: 40vh !important;
-      background-position: top !important;
+      background-position: center !important;
     }
 
     .formRight, .select {
@@ -185,6 +185,13 @@
       form {
         margin-left: 2vw !important;
         margin-right: 2vw !important;
+      }
+    }
+
+    .selectFormRight {
+      .select {
+        margin-top: 4vw;
+        margin-bottom: 4vw;
       }
     }
   }
@@ -528,11 +535,11 @@
       select {
         $form-select-color: $input-color !important;
         $form-select-indicator-color: $gray-800 !important;
+        margin-bottom: 2vw;
       }
 
       form {
-        margin-top: 4vw;
-
+        
         input, textarea {
           @include input;
         }
