@@ -1,9 +1,18 @@
 var express = require("express");
+const fetch = require("node-fetch");
 var router = express.Router();
 
-// /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
+let titles = [];
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((response) => response.json())
+  .then((resultado) => {
+    resultado.forEach((element) => {
+      titles.push(element.title);
+    });
+  });
+
+setTimeout(() => {
+  console.log(titles, "titles");
+}, 257);
 
 module.exports = router;

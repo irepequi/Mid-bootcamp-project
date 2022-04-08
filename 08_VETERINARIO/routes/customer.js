@@ -1,7 +1,7 @@
 var express = require("express");
 const customerController = require("../controllers/customerController");
 const uploadImage = require("../middleware/uploadFile");
-const verify = require("./");
+const verify = require("../middleware/verify");
 var router = express.Router();
 
 // Ruta base = localhost:3000/customer

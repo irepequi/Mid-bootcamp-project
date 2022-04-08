@@ -1,8 +1,8 @@
 const connection = require("../config/db");
-const jwt = require("dotenv").config();
 const sha1 = require("sha1");
 const bcrypt = require("bcrypt");
-
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
 class CustormerController {
   // Muestra el formulario de registro de customer
   showRegisterForm = (req, res) => {
@@ -26,38 +26,59 @@ class CustormerController {
       }
 
       connection.query(sql, (error, result) => {
-        if (error) throw error;
-        res.render("login", { result: "" });
+        // if (error) throw error;
+        // res.render("login", { result: "" });
+        error
+          ? res.status(400).json({ error })
+          : res.status(200).json("todo correcto");
       });
     });
   };
 
+  // //   Logueo del customer
+  // login = (req, res) => {
+  //   let { email, password } = req.body;
+  //   let encryptedPass = sha1(password);
+
+  //   let sql = `SELECT customer_id FROM customer WHERE email = '${email}' AND password = '${encryptedPass}' `;
+  //   connection.query(sql, (error, result) => {
+  //     if (error) throw error;
+  //     console.log(result);
+  //     if (result.length === 0) {
+  //       res.render("login", { result: "Las credenciales no son correctas" });
+  //     } else {
+  //       res.redirect(`/customer/oneCustomer/${result[0].customer_id}`);
+  //     }
+  //   });
+  // };
+
   // Logueo del customer con bcrypt
   login = (req, res) => {
     let { email, password } = req.body;
-
     let sql = `SELECT password, customer_id FROM customer WHERE email = '${email}'`;
-
     connection.query(sql, (error, result) => {
       if (error) throw error;
       if (result.length == 0) {
-        res.render("login", { result: "Las credenciales no son correctas" });
+        // res.render("login", { result: "Las credenciales no son correctas" });
+        res.status(401).json("credenciales incorrectas");
       } else {
         let encryptedPass = result[0].password;
         bcrypt.compare(password, encryptedPass, (error, result_compare) => {
           if (result_compare) {
             const token = jwt.sign(
-              { id: result[0].customer_id, nombre: "irene" },
+              { id: result[0].customer_id, nombre: "miriam" },
               process.env.SECRET_KEY,
-              { expiresIn: "5 min" }
+              { expiresIn: "1 min" }
             );
             console.log(token);
 
-            res.redirect(`/customer/oneCustomer/${result[0].customer_id}`);
+            // res.redirect(`/customer/oneCustomer/${result[0].customer_id}`);
+            res.status(200).json(token);
           } else {
-            res.render("login", {
-              result: "Las credenciales no son correctas",
-            });
+            // res.render("login", {
+            //   result: "Las credenciales no son correctas",
+            // });
+            res.status(401).json("credenciales incorrectas");
           }
         });
       }
@@ -76,10 +97,14 @@ class CustormerController {
     let sql2 = `SELECT * FROM pet WHERE customer_id = ${customer_id} AND deleted = 0`;
 
     connection.query(sql, (error, resultCustomer) => {
-      if (error) throw error;
+      // if (error) throw error;
+      if (error) res.status(400).json({ error });
       connection.query(sql2, (error, resultPet) => {
-        if (error) throw error;
-        res.render("oneCustomer", { resultCustomer, resultPet });
+        // if (error) throw error;
+        // res.render("oneCustomer", { resultCustomer, resultPet });
+        error
+          ? res.status(400).json({ error })
+          : res.status(200).json("todo correcto");
       });
     });
   };
