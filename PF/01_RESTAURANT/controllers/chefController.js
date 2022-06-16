@@ -66,12 +66,25 @@ class ChefController {
     let chef_id = req.params.chef_id;
     let sql = `SELECT * FROM chef WHERE chef_id = ${chef_id}`;
     let sql2 = `SELECT * FROM dish WHERE chef_id = ${chef_id} AND deleted = 0`;
+    let veganFilter = `SELECT * FROM dish WHERE vegan = 1`;
+    let vegetarianFilter = `SELECT * FROM dish WHERE vegetarian = 1`;
 
     connection.query(sql, (error, resultChef) => {
       if (error) throw error;
       connection.query(sql2, (error, resultDish) => {
         if (error) throw error;
-        res.render("profile", { resultChef, resultDish });
+        connection.query(veganFilter, (error, resultVegan) => {
+          if (error) throw error;
+          connection.query(vegetarianFilter, (error, resultVegetarian) => {
+            if (error) throw error;
+            res.render("profile", {
+              resultChef,
+              resultDish,
+              resultVegan,
+              resultVegetarian,
+            });
+          });
+        });
       });
     });
   };

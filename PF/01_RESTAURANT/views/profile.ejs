@@ -77,8 +77,36 @@
             
         </div>
 
-        <!-- platos del chef -->
-        <div class="col-lg-8">
+        <div class="col-lg-9">
+          <!-- menu filtro -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"><span class="material-icons">checklist</span></button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Filtros</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <!-- checklist filtros -->
+            <div class="offcanvas-body">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="resultVegan[0].chef_id" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Plato vegano
+                </label>
+              </div>
+              
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="resultVegetarian[0].chef_id" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Plato vegetariano
+                </label>
+              </div>
+
+              <button></button>
+            </div>
+          </div>
+          
+          <!-- platos del chef -->
           <div class="d-flex flex-wrap ms-5 mt-4">
             <% resultDish.forEach(dish => { %>
               <div class="card m-2" style="width: 18rem">
