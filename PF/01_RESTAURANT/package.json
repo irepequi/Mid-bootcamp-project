@@ -7,18 +7,18 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.6",
-    "debug": "~4.3.5",
+    "debug": "~4.3.7",
     "dicer": "^0.3.1",
     "ejs": "~3.1.10",
-    "express": "~4.19.2",
+    "express": "~4.21.0",
     "http-errors": "~2.0.0",
     "morgan": "~1.10.0",
     "multer": "^1.4.4",
     "mysql": "^2.18.1",
     "sha1": "^1.1.1",
-    "swiper": "^11.1.4"
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.7"
   }
 }
